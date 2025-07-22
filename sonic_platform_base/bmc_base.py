@@ -9,17 +9,19 @@
 from . import device_base
 
 class BMCBase(device_base.DeviceBase):
-    # TODO(BMC): add virtual BMC APIs
-    '''
-    get_eeprom()
 
-    get_version()
-
-    # TODO(BMC): check if params are needed or use the root
-    reset_password()
-
-    collect_dump()
-
-    update_firmware(fw_image)
-    '''
-    pass
+    def get_eeprom(self):
+        raise NotImplementedError
+    
+    def get_version(self):
+        raise NotImplementedError
+    
+    def reset_password(self):
+        raise NotImplementedError
+    
+    # TODO(BMC): Check if we need to expose the trigger and get functions
+    def collect_dump(self):
+        raise NotImplementedError
+    
+    def update_firmware(self, fw_image):
+        raise NotImplementedError
