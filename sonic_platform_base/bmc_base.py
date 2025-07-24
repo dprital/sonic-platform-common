@@ -19,8 +19,10 @@ class BMCBase(device_base.DeviceBase):
     def reset_password(self):
         raise NotImplementedError
     
-    # TODO(BMC): Check if we need to expose the trigger and get functions
-    def collect_dump(self):
+    def trigger_bmc_debug_log_dump(self):
+        raise NotImplementedError
+    
+    def get_bmc_debug_log_dump(self, task_id, filename, path, timeout = 120):
         raise NotImplementedError
     
     def update_firmware(self, fw_image):
