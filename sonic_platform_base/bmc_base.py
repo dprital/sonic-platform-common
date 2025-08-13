@@ -36,7 +36,7 @@ class BMCBase(device_base.DeviceBase):
 
         Returns:
             A tuple (ret, msg) where:
-                ret: An integer return code indicating success or failure
+                ret: An integer return code indicating success (0) or failure
                 msg: A string containing success message or error description
         """
         raise NotImplementedError
@@ -47,7 +47,7 @@ class BMCBase(device_base.DeviceBase):
 
         Returns:
             A tuple (ret, (task_id, err_msg)) where:
-                ret: An integer return code indicating success or failure
+                ret: An integer return code indicating success (0) or failure
                 task_id: A string containing the Redfish task ID for monitoring
                          the debug log dump operation. Returns '-1' on failure.
                 err_msg: A string containing error message if operation failed,
@@ -68,7 +68,7 @@ class BMCBase(device_base.DeviceBase):
 
         Returns:
             A tuple (ret, err_msg) where:
-                ret: An integer return code indicating success or failure
+                ret: An integer return code indicating success (0) or failure
                 err_msg: A string containing error message if operation failed
         """
         raise NotImplementedError
@@ -82,7 +82,7 @@ class BMCBase(device_base.DeviceBase):
 
         Returns:
             A tuple (ret, (msg, updated)) where:
-                ret: An integer return code indicating success or failure
+                ret: An integer return code indicating success (0) or failure
                 msg: A string containing status message about the firmware update
                 updated: A boolean indicating whether the BMC firmware was updated
         """
