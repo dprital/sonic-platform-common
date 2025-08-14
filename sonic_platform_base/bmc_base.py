@@ -84,6 +84,5 @@ class BMCBase(device_base.DeviceBase):
             A tuple (ret, (msg, updated)) where:
                 ret: An integer return code indicating success (0) or failure
                 msg: A string containing status message about the firmware update
-                updated: A boolean indicating whether the BMC firmware was updated
         """
         raise NotImplementedError
