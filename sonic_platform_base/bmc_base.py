@@ -81,7 +81,7 @@ class BMCBase(device_base.DeviceBase):
             fw_image: A string containing the path to the firmware image file
 
         Returns:
-            A tuple (ret, (msg, updated)) where:
+            A tuple (ret, msg) where:
                 ret: An integer return code indicating success (0) or failure
                 msg: A string containing status message about the firmware update
         """
